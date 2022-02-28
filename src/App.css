@@ -1,38 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Coustard&family=Monoton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #A57C00;
+}
+ 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  color: 	#D2042D;
+  font-family: 'Coustard', serif;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App > div .Ok-btn {
+  position: absolute;
+  padding: 8px;
+  left: calc(100% + 8px);
+  background-color: lightgray;
+  padding: 3px;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+.App > div .Show-btn {
+  position: absolute;
+  padding: 8px;
+  left: calc(100% + 8px);
+  background-color: lightgray;
+  padding: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.App > div .Result-fields {
+  position: absolute;
+  top: -5px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+  font-weight: bold;
+}
+.Result-field {
+ height: 15px;
+ width: 15px;
+ margin: 1px;
+ border-radius: 10px;
+ border-width: 0px;
+ background-color: #A57C00;
+}
+
+.Hide-field{
+  height: 50px;
+  width:  50px;
+  background-color: #996515;
+}
+.Color-field{
+  height: 50px;
+  width:  50px;
+  color: #666666;
+  cursor: pointer;
+}
+
+.Hr{	
+	width: 50%;
+ 	background-color: #996515;
+	border-color: #996515;
+}
+
+.Link-text{
+font-size: 20px;
+padding: 20px;
+cursor: pointer;
+}
+
+
