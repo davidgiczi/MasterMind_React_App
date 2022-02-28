@@ -43,7 +43,7 @@ function GetFirstRow() {
         setForth(() => Math.floor(Math.random() * 8) + 1)
         counter++;
         if(counter === 30){
-            clearTimeout(intro)
+            clearInterval(intro)
             setFirst(0);
             setSecond(0);
             setThird(0);
