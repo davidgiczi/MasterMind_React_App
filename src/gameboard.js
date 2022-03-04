@@ -9,14 +9,10 @@ let counter = 0;
 
 function MasterMindApp() {
     return (<>
-        <br></br>
         <h1>MasterMind</h1>
-        <GetFirstRow />
-        <br></br>
+        <GetFirstRow/>
         <GetTableRows />
-        <br></br>
         <hr className="Hr" />
-        <br></br>
         <GetNewGameText />
     </>
     )
@@ -54,7 +50,7 @@ function GetFirstRow() {
 
    }, [])
 
-    return (<div>
+    return (<div className='First-row'>
         <button className="Hide-field" style={{backgroundColor : COLORS[first]}}></button>
         <button className="Hide-field" style={{backgroundColor : COLORS[second]}}></button>
         <button className="Hide-field" style={{backgroundColor : COLORS[third]}}></button>

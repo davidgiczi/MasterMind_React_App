@@ -9,7 +9,13 @@
 body{
   background-color: #A57C00;
 }
- 
+
+h1{margin: 10px;}
+
+.First-row {margin: 20px;}
+
+button {border-color: gray;}
+
 .App {
   position: relative;
   display: flex;
@@ -81,6 +87,7 @@ body{
 	width: 50%;
  	background-color: #996515;
 	border-color: #996515;
+  margin: 20px;
 }
 
 .Link-text{
