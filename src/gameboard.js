@@ -68,34 +68,34 @@ function GetFirstRow() {
 function GetTableRows() {
     return (<>
         <div>
-        <GetTableRow ID1={0} ID2={1} ID3={2} ID4={3}/>   
+        <GetTableRow ID1={0} ID2={1} ID3={2} ID4={3} row={0}/>   
         </div>
         <div>
-        <GetTableRow ID1={4} ID2={5} ID3={6} ID4={7}/>
+        <GetTableRow ID1={4} ID2={5} ID3={6} ID4={7} row={1}/>
         </div>
         <div>
-        <GetTableRow ID1={8} ID2={9} ID3={10} ID4={11}/>
+        <GetTableRow ID1={8} ID2={9} ID3={10} ID4={11} row={2}/>
         </div>
         <div>
-        <GetTableRow ID1={12} ID2={13} ID3={14} ID4={15}/>
+        <GetTableRow ID1={12} ID2={13} ID3={14} ID4={15} row={3}/>
         </div>
         <div>
-        <GetTableRow ID1={16} ID2={17} ID3={18} ID4={19}/>
+        <GetTableRow ID1={16} ID2={17} ID3={18} ID4={19} row={4}/>
         </div>
         <div>
-        <GetTableRow ID1={20} ID2={21} ID3={22} ID4={23}/>
+        <GetTableRow ID1={20} ID2={21} ID3={22} ID4={23} row={5}/>
         </div>
         <div>
-        <GetTableRow ID1={24} ID2={25} ID3={26} ID4={27}/>
+        <GetTableRow ID1={24} ID2={25} ID3={26} ID4={27} row={6}/>
         </div>
         <div>
-        <GetTableRow ID1={28} ID2={29} ID3={30} ID4={31}/>
+        <GetTableRow ID1={28} ID2={29} ID3={30} ID4={31} row={7}/>
         </div>
         <div>
-        <GetTableRow ID1={32} ID2={33} ID3={34} ID4={35}/>
+        <GetTableRow ID1={32} ID2={33} ID3={34} ID4={35} row={8}/>
         </div>
         <div>
-        <GetTableRow ID1={36} ID2={37} ID3={38} ID4={39}/>
+        <GetTableRow ID1={36} ID2={37} ID3={38} ID4={39} row={9}/>
         </div>
         </>)
 }
@@ -114,6 +114,7 @@ function GetTableRows() {
         const[secondTextColor, setSecondTextColor] = useState("#996515");
         const[thirdTextColor, setThirdTextColor] = useState("#996515");
         const[forthTextColor, setForthTextColor] = useState("#996515");
+        
         return <>
             <div className="Result-fields">
             <button className="Result-field" style={{ backgroundColor: COLORS[firstResultColor] }}></button>
@@ -123,30 +124,45 @@ function GetTableRows() {
             </div>
             <button className="Color-field" id={props.ID1} style={{ backgroundColor: COLORS[firstFieldColor], color: firstTextColor }}
             onClick={() => {
+                if(props.row !== counter){
+                    return;
+                }
             setFirstTextColor("#666666");
             setFirstFieldColor((n) => n === 9 ? n = 1 : n = n + 1)
             setTipp(props.ID1, firstFieldColor)
             }}>{firstFieldColor}</button>
             <button className="Color-field" id={props.ID2} style={{ backgroundColor: COLORS[secondFieldColor], color: secondTextColor}}
             onClick={() => {
+                if(props.row !== counter){
+                    return;
+                }
             setSecondTextColor("#666666");
             setSecondFieldColor((n) => n === 9 ? n = 1 : n = n + 1)
             setTipp(props.ID2, secondFieldColor)
             }}>{secondFieldColor}</button>
             <button className="Color-field" id={props.ID3} style={{ backgroundColor: COLORS[thirdFieldColor], color: thirdTextColor }}
             onClick={() => {
+                if(props.row !== counter){
+                    return;
+                }
             setThirdTextColor("#666666");
             setThirdFieldColor((n) => n === 9 ? n = 1 : n = n + 1)
             setTipp(props.ID3, thirdFieldColor)
             }}>{thirdFieldColor}</button>
             <button className="Color-field" id={props.ID4} style={{ backgroundColor: COLORS[forthFieldColor], color: forthTextColor }}
             onClick={() => {
+                if(props.row !== counter){
+                    return;
+                }
             setForthTextColor("#666666");
             setForthFieldColor((n) => n === 9 ? n = 1 : n = n + 1)
             setTipp(props.ID4, forthFieldColor)
             }}>{forthFieldColor}</button>
             <button className="Ok-btn" 
             onClick={() => {
+                if(props.row !== counter){
+                    return;
+                }
             setDisabled(true)
             evaluateTipp()
             counter++;
